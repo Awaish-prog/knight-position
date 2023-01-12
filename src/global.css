@@ -1,0 +1,27 @@
+.chessBoard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 47vw;
+    border: 2px solid black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.whiteCell {
+    background-color: white
+}
+.blackCell {
+    background-color: gray
+}
+.whiteCell, .blackCell {
+    color: blue;
+    width: 90px;
+    height: 90px;
+    
+}
+.cellPara {
+    margin: 0 5px;
+}
+.knightImage {
+    margin-left: 20px;
+    
+}
