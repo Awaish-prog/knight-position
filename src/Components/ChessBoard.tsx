@@ -3,10 +3,11 @@ import "../global.css"
 import knight from "../download.png"
 
 interface Postion {
-    position: number
+    position: number,
+    places: Array<number>
 }
 
-const ChessBoard : React.FC<Postion> = ({position} : Postion) : JSX.Element => {
+const ChessBoard : React.FC<Postion> = ({position, places} : Postion) : JSX.Element => {
   const [chessBoard, setChessBoard] = useState<Array<number>>([1])
   
   let offset = 0;
@@ -25,12 +26,12 @@ const ChessBoard : React.FC<Postion> = ({position} : Postion) : JSX.Element => {
       chessBoard.map((cell, index) => {
         if(offsetHelper === 8){
           offset++
-          offsetHelper = 0
+          offsetHelper = 0 
         }
         offsetHelper++
-        return <div className={(index + offset) % 2 ? 'whiteCell' : "blackCell"} key={index}>
+        return <div className={(index + offset) % 2 ? 'whiteCell' : "blackCell"} id={places.includes(index + 1) ? "validPlace": ""} key={index}>
           <p className='cellPara'>{cell}</p>
-          {index === position ? <img src={knight} width="40px" className="knightImage" /> : null }</div>
+          {index === position - 1 ? <img src={knight} width="40px" className="knightImage" /> : null }</div>
       })
     }
     </div>
