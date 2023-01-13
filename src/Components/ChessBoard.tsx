@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "../global.css"
-import knight from "../download.png"
+import knight from "../—Pngtree—black chess knight horse stallion_8864303.png"
 
 interface Postion {
     position: number,
@@ -31,7 +31,7 @@ const ChessBoard : React.FC<Postion> = ({position, places} : Postion) : JSX.Elem
         offsetHelper++
         return <div className={(index + offset) % 2 ? 'whiteCell' : "blackCell"} id={places.includes(index + 1) ? "validPlace": ""} key={index}>
           <p className='cellPara'>{cell}</p>
-          {index === position - 1 ? <img src={knight} width="40px" className="knightImage" /> : null }</div>
+          {index === position - 1 ? <img src={knight} width="100px" className="knightImage" /> : null }</div>
       })
     }
     </div>

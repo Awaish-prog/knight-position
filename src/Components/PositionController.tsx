@@ -19,7 +19,7 @@ const PositionController : React.FC<ChangePosition> = ({changePosition, calculat
 
     return (
         <section className="controller">
-        <p>Enter a position from 1 to 64</p>
+        <p className="enter">Enter a position from 1 to 64</p>
         <form className="positionForm" onSubmit={(e) => {
             e.preventDefault()
             changePoistionToNew()

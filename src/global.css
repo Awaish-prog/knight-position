@@ -2,6 +2,7 @@ body, html, #root {
     width: 100%;
     overflow: scroll;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #FBEEC1
 }
 .chessBoardContainer {
     display: flex;
@@ -13,18 +14,18 @@ body, html, #root {
     flex-wrap: wrap;
     width: 720px;
     min-width: 720px;
-    border: 2px solid black;
+    border: 2px solid #374785
     
 }
 
 .whiteCell {
-    background-color: white
+    background-color: #FBEEC1
 }
 .blackCell {
-    background-color: gray
+    background-color: #374785
 }
 .whiteCell, .blackCell {
-    color: blue;
+    color: #C43300;
     width: 90px;
     height: 90px;
     
@@ -33,11 +34,11 @@ body, html, #root {
     margin: 0 5px;
 }
 .knightImage {
-    margin-left: 20px;
+    margin: -20px 0 0 -12px;
     
 }
 #validPlace {
-    background-color: brown;
+    background-color: greenyellow;
 }
 .controller {
     display: flex;
@@ -53,6 +54,18 @@ body, html, #root {
 }
 .controlButtons{
     margin: 5px 0;
-    padding: 5px;
+    padding: 5px 10px;
     cursor: pointer;
+    background-color: #374785;
+    color: #FBEEC1;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+}
+.enter {
+    color: #C43300;
+}
+.controlButtons:hover{
+    text-decoration: underline;
+    background-color: #24305E;
 }
