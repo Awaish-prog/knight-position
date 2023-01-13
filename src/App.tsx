@@ -13,7 +13,7 @@ function App() {
     const validPositions : Array<number> = []
     const row = position % 8
     const column = Math.floor(position / 8) 
-    if(row > 2){
+    if(row > 2 || row === 0){
       if(position - 2 + 8 < 65){
         validPositions.push(position - 2 + 8)
       }
@@ -22,7 +22,7 @@ function App() {
       }
       
     }
-    if(row < 7){
+    if(row < 7 && row !== 0){
       if(position + 2 + 8 < 65){
         validPositions.push(position + 2 + 8)
       }
@@ -36,7 +36,8 @@ function App() {
         validPositions.push(position - 16 + 1)
       }
       
-      if((position - 16) % 8 > 1){
+      
+      if((position - 16) % 8 > 1 || (position - 16) % 8 === 0){
         validPositions.push(position - 16 - 1)
       }
       
@@ -45,7 +46,8 @@ function App() {
       if((position + 16) % 8 > 0){
         validPositions.push(position + 16 + 1)
       }
-      if((position + 16) % 8 > 1){
+      
+      if((position + 16) % 8 > 1 || (position - 16) % 8 === 0){
         validPositions.push(position + 16 - 1)
       }
       
